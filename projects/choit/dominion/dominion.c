@@ -742,11 +742,7 @@ int feastCard(struct gameState* state, int choice1) {
     updateCoins(currentPlayer, state, 5);
     x = 1;             // Condition to loop on
     while (x == 1) {   // Buy one card
-        // if (supplyCount(choice1, state) <= 0) {
-
-        // BUG INTRODUCED: The supply count check will output message of no
-        // cards left when there might be one still left.
-        if (supplyCount(choice1, state) <= 1) {
+        if (supplyCount(choice1, state) <= 0) {
             if (DEBUG)
                 printf("None of that card left, sorry!\n");
 
