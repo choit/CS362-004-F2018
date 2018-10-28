@@ -650,7 +650,6 @@ int smithyCard(struct gameState* state, int handPos) {
 }
 
 int adventurerCard(struct gameState* state) {
-
     int drawntreasure = 0;
     int z             = 0;
     int currentPlayer = whoseTurn(state);
