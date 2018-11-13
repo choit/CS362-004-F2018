@@ -1,0 +1,40 @@
+randomtestcard1.c:
+
+----------------- TESTING CARD: SMITHY ----------------
+
+TEST 1: Verify Smithy Card Usage
+PASSED: 10000 of 10000
+
+TEST 2: Verify Hand Count
+PASSED: 0 of 10000
+
+TEST 3: Verify Deck Count
+PASSED: 0 of 10000
+
+TEST 4: Verify Discard Count
+PASSED: 7 of 10000
+
+TEST 5: Verify Treasure Count
+PASSED: 10000 of 10000
+
+TEST 6: Verify Coin Count
+PASSED: 10000 of 10000
+
+TEST 7: Verify Smithy Supply Count
+PASSED: 10000 of 10000
+
+------------ FINISHED TESTING CARD: SMITHY ------------
+
+----------------- TOTAL COVERAGE RESULTS: -----------------
+Function 'smithyCard'
+Lines executed:100.00% of 6
+Branches executed:100.00% of 2
+Taken at least once:100.00% of 2
+No calls
+--
+Function 'smithyCard'
+Lines executed:100.00% of 6
+Branches executed:100.00% of 2
+Taken at least once:100.00% of 2
+No calls
+----------------- END OF COVERAGE RESULTS: ----------------

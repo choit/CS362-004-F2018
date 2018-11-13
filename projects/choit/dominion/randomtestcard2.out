@@ -1,0 +1,40 @@
+randomtestcard2.c:
+
+----------------- TESTING CARD: COUNCIL ROOM ----------------
+
+TEST 1: Verify Council Room Card Usage
+PASSED: 10000 of 10000
+
+TEST 2: Verify Hand Count
+PASSED: 8 of 10000
+
+TEST 3: Verify Deck Count
+PASSED: 0 of 10000
+
+TEST 4: Verify Discard Count
+PASSED: 25 of 10000
+
+TEST 5: Verify Number of Buys
+PASSED: 10000 of 10000
+
+TEST 6: Verify Coin Count
+PASSED: 10000 of 10000
+
+TEST 7: Verify Council Room Supply Count
+PASSED: 10000 of 10000
+
+------------ FINISHED TESTING CARD: COUNCIL ROOM ------------
+
+----------------- TOTAL COVERAGE RESULTS: -----------------
+Function 'councilRoomCard'
+Lines executed:100.00% of 10
+Branches executed:100.00% of 4
+Taken at least once:100.00% of 4
+No calls
+--
+Function 'councilRoomCard'
+Lines executed:100.00% of 10
+Branches executed:100.00% of 4
+Taken at least once:100.00% of 4
+No calls
+----------------- END OF COVERAGE RESULTS: ----------------

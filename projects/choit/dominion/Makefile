@@ -98,10 +98,54 @@ cardtest4: dominion.o cardtest4.c
 	gcc -o cardtest4 cardtest4.c dominion.o rngs.o $(CFLAGS)
 	./cardtest4
 
+randomtestresults: dominion.o randomtestadventurer.c randomtestcard1.c randomtestcard2.c
+	rm -f randomtestadventurer.out
+	echo "randomtestadventurer.c:" >> randomtestadventurer.out
+	gcc -o randomtestadventurer randomtestadventurer.c dominion.o rngs.o $(CFLAGS)
+	./randomtestadventurer >> randomtestadventurer.out
+
+	rm -f randomtestcard1.out
+	echo "randomtestcard1.c:" >> randomtestcard1.out
+	gcc -o randomtestcard1 randomtestcard1.c dominion.o rngs.o $(CFLAGS)
+	./randomtestcard1 >> randomtestcard1.out
+
+	rm -f randomtestcard2.out
+	echo "randomtestcard2.c:" >> randomtestcard2.out
+	gcc -o randomtestcard2 randomtestcard2.c dominion.o rngs.o $(CFLAGS)
+	./randomtestcard2 >> randomtestcard2.out
+
+	gcov -f -b dominion.c >> randomtestresults.out
+
+	echo "----------------- TOTAL COVERAGE RESULTS: -----------------" >> randomtestadventurer.out
+	grep -i "Function 'adventurerCard'" -A 4 randomtestresults.out >> randomtestadventurer.out
+	echo "----------------- END OF COVERAGE RESULTS: ----------------" >> randomtestadventurer.out
+
+	echo "----------------- TOTAL COVERAGE RESULTS: -----------------" >> randomtestcard1.out
+	grep -i "Function 'smithyCard'" -A 4 randomtestresults.out >> randomtestcard1.out
+	echo "----------------- END OF COVERAGE RESULTS: ----------------" >> randomtestcard1.out
+
+	echo "----------------- TOTAL COVERAGE RESULTS: -----------------" >> randomtestcard2.out
+	grep -i "Function 'councilRoomCard'" -A 4 randomtestresults.out >> randomtestcard2.out
+	echo "----------------- END OF COVERAGE RESULTS: ----------------" >> randomtestcard2.out
+
+	rm -f randomtestresults.out
+
+randomtestadventurer: dominion.o randomtestadventurer.c
+	gcc -o randomtestadventurer randomtestadventurer.c dominion.o rngs.o $(CFLAGS)
+	./randomtestadventurer
+
+randomtestcard1: dominion.o randomtestcard1.c
+	gcc -o randomtestcard1 randomtestcard1.c dominion.o rngs.o $(CFLAGS)
+	./randomtestcard1
+
+randomtestcard2: dominion.o randomtestcard2.c
+	gcc -o randomtestcard2 randomtestcard2.c dominion.o rngs.o $(CFLAGS)
+	./randomtestcard2
+
 player: player.c interface.o
 	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)
 
 all: playdom player
 
 clean:
-	rm -f *.o playdom.exe playdom player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 cardtest5 badTestDrawCard player.exe  *.gcov *.gcda *.gcno *.so *.out testDrawCard testDrawCard.exe
+	rm -f *.o playdom.exe playdom player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 randomtestadventurer randomtestcard1 randomtestcard2 badTestDrawCard player.exe  *.gcov *.gcda *.gcno *.so testDrawCard testDrawCard.exe
