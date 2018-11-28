@@ -1,0 +1,407 @@
+unittest1.c:
+
+----------------- TESTING FUNCTION: buyCard ----------------
+
+TEST 1: No Coins Remaining
+Passed: Purchase was unsuccessful
+
+TEST 2: No Supply Remaining
+Passed: Purchase was unsuccessful
+
+TEST 3: Insufficient Funds
+Passed: Purchase was unsuccessful
+
+TEST 4: Valid Purchase Condition
+Passed: Purchase was made successfully
+
+TEST 5: Invalid Purchase Condition
+Passed: Purchase was unsuccessful
+
+------------ FINISHED TESTING FUNCTION: buyCard ------------
+
+unittest2.c:
+
+----------------- TESTING FUNCTION: getCost ----------------
+
+TEST 1: Get The Cost of All Implemented Cards
+
+CURSE CARD COST:
+Passed: Actual = 0, Expected = 0
+
+ESTATE CARD COST:
+Passed: Actual = 2, Expected = 2
+
+DUCHY CARD COST:
+Passed: Actual = 5, Expected = 5
+
+PROVINCE CARD COST:
+Passed: Actual = 8, Expected = 8
+
+COPPER CARD COST:
+Passed: Actual = 0, Expected = 0
+
+SILVER CARD COST:
+Passed: Actual = 3, Expected = 3
+
+GOLD CARD COST:
+Passed: Actual = 6, Expected = 6
+
+ADVENTURER CARD COST:
+Passed: Actual = 6, Expected = 6
+
+COUNCIL ROOM CARD COST:
+Passed: Actual = 5, Expected = 5
+
+FEAST CARD COST:
+Passed: Actual = 4, Expected = 4
+
+GARDENS CARD COST:
+Passed: Actual = 4, Expected = 4
+
+MINE CARD COST:
+Passed: Actual = 5, Expected = 5
+
+REMODEL CARD COST:
+Passed: Actual = 4, Expected = 4
+
+SMITHY CARD COST:
+Passed: Actual = 4, Expected = 4
+
+VILLAGE CARD COST:
+Passed: Actual = 3, Expected = 3
+
+BARON CARD COST:
+Passed: Actual = 4, Expected = 4
+
+GREAT HALL CARD COST:
+Passed: Actual = 3, Expected = 3
+
+MINION CARD COST:
+Passed: Actual = 5, Expected = 5
+
+STEWARD CARD COST:
+Passed: Actual = 3, Expected = 3
+
+TRIBUTE CARD COST:
+Passed: Actual = 5, Expected = 5
+
+AMBASSADOR CARD COST:
+Passed: Actual = 3, Expected = 3
+
+CUTPURSE CARD COST:
+Passed: Actual = 4, Expected = 4
+
+EMBARGO CARD COST:
+Passed: Actual = 2, Expected = 2
+
+OUTPOST CARD COST:
+Passed: Actual = 5, Expected = 5
+
+SALVAGER CARD COST:
+Passed: Actual = 4, Expected = 4
+
+SEA HAG CARD COST:
+Passed: Actual = 4, Expected = 4
+
+TREASURE MAP CARD COST:
+Passed: Actual = 4, Expected = 4
+
+TEST 2: Get The Cost of Non-existent Card
+
+SOOTHSAYER CARD COST:
+Passed: Actual = -1, Expected = 5
+
+------------ FINISHED TESTING FUNCTION: getCost ------------
+
+unittest3.c:
+
+----------------- TESTING FUNCTION: updateCoins ----------------
+
+TEST 1: Check Copper Coin
+Passed: Actual = 4, Expected = 4
+
+TEST 2: Check Silver Coin
+Passed: Actual = 5, Expected = 5
+
+TEST 3: Check Gold Coin
+Passed: Actual = 6, Expected = 6
+
+TEST 4: Check Gold Plus Bonus
+Passed: Actual = 7, Expected = 7
+
+------------ FINISHED TESTING FUNCTION: updateCoins ------------
+
+unittest4.c:
+
+----------------- TESTING FUNCTION: whoseTurn ----------------
+
+TEST 1: Check If Player 0's Turn
+Passed: Actual = 0, Expected = 0
+
+TEST 2: Check If Player 1's Turn
+Passed: Actual = 1, Expected = 1
+
+------------ FINISHED TESTING FUNCTION: whoseTurn ------------
+
+cardtest1.c:
+
+----------------- TESTING CARD: SMITHY ----------------
+
+TEST 1: Verify Smithy Card Usage
+Passed: Actual = 1, Expected = 1
+
+TEST 2: Verify Hand Count
+Failed: Actual = 8, Expected = 7
+
+TEST 3: Verify Deck Count
+Failed: Actual = 1, Expected = 2
+
+TEST 4: Verify Discard Count
+Failed: Actual = 0, Expected = 1
+
+------------ FINISHED TESTING CARD: SMITHY ------------
+
+cardtest2.c:
+
+----------------- TESTING CARD: ADVENTURER ----------------
+
+TEST 1: Verify Adventurer Card Usage
+Failed: Actual = 0, Expected = 1
+
+TEST 2: Verify Hand Count
+Passed: Actual = 7, Expected = 7
+
+TEST 3: Verify Deck Count
+Passed: Actual = 3, Expected = 3
+
+TEST 4: Verify Discard Count
+Failed: Actual = 0, Expected = 1
+
+TEST 5: Verify Treasure Count
+Passed: Actual = 6, Expected = 6
+
+TEST 6: Verify Coin Count
+Passed: Actual = 4, Expected = 4
+
+------------ FINISHED TESTING CARD: ADVENTURER ------------
+
+cardtest3.c:
+
+----------------- TESTING CARD: COUNCIL ROOM ----------------
+
+TEST 1: Verify Council Room Card Usage
+Passed: Actual = 1, Expected = 1
+
+TEST 2: Verify Hand Count
+Passed: Actual = 8, Expected = 8
+
+TEST 3: Verify Deck Count
+Passed: Actual = 1, Expected = 1
+
+TEST 4: Verify Discard Count
+Failed: Actual = 0, Expected = 1
+
+TEST 5: Verify Number of Buys
+Passed: Actual = 2, Expected = 2
+
+------------ FINISHED TESTING CARD: COUNCIL ROOM ------------
+
+cardtest4.c:
+
+----------------- TESTING CARD: MINE ----------------
+
+TEST 1: Swap Copper Card for a Copper Card
+Passed: Actual = 4, Expected = 4
+
+TEST 2: Swap Copper Card for a Gold Card
+Passed: Actual = 6, Expected = 6
+
+TEST 3: Swap Copper Card for an Invalid Card (Upper Range)
+Passed: Actual = 4, Expected = 27
+
+TEST 4: Swap Copper Card for an Invalid Card (Lower Range)
+Passed: Actual = 4, Expected = -1
+
+TEST 5: Swap Non-Treasure Card (Lower Range) with a Gold Card
+Passed: Actual = 0, Expected = 6
+
+TEST 6: Swap Non-Treasure Card (Upper Range) with a Copper Card
+Passed: Actual = 2, Expected = 4
+
+------------ FINISHED TESTING CARD: MINE ------------
+
+----------------- TOTAL COVERAGE RESULTS: -----------------
+Function 'compare'
+Lines executed:83.33% of 6
+Branches executed:100.00% of 4
+Taken at least once:75.00% of 4
+No calls
+
+Function 'newGame'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+Function 'kingdomCards'
+Lines executed:0.00% of 12
+No branches
+No calls
+
+Function 'initializeGame'
+Lines executed:88.61% of 79
+Branches executed:95.65% of 46
+Taken at least once:80.43% of 46
+No calls
+
+Function 'shuffle'
+Lines executed:100.00% of 18
+Branches executed:100.00% of 8
+Taken at least once:100.00% of 8
+No calls
+
+Function 'playCard'
+Lines executed:0.00% of 15
+Branches executed:0.00% of 12
+Taken at least once:0.00% of 12
+No calls
+
+Function 'buyCard'
+Lines executed:100.00% of 14
+Branches executed:100.00% of 6
+Taken at least once:100.00% of 6
+No calls
+
+Function 'numHandCards'
+Lines executed:0.00% of 1
+No branches
+No calls
+
+Function 'handCard'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+Function 'supplyCount'
+Lines executed:100.00% of 1
+No branches
+No calls
+
+Function 'fullDeckCount'
+Lines executed:0.00% of 14
+Branches executed:0.00% of 12
+Taken at least once:0.00% of 12
+No calls
+
+Function 'whoseTurn'
+Lines executed:100.00% of 1
+No branches
+No calls
+
+Function 'endTurn'
+Lines executed:100.00% of 24
+Branches executed:100.00% of 6
+Taken at least once:100.00% of 6
+No calls
+
+Function 'isGameOver'
+Lines executed:0.00% of 12
+Branches executed:0.00% of 8
+Taken at least once:0.00% of 8
+No calls
+
+Function 'scoreFor'
+Lines executed:0.00% of 62
+Branches executed:0.00% of 42
+Taken at least once:0.00% of 42
+No calls
+
+Function 'getWinners'
+Lines executed:0.00% of 33
+Branches executed:0.00% of 22
+Taken at least once:0.00% of 22
+No calls
+
+Function 'drawCard'
+Lines executed:71.43% of 28
+Branches executed:100.00% of 6
+Taken at least once:66.67% of 6
+No calls
+
+Function 'getCost'
+Lines executed:100.00% of 30
+Branches executed:100.00% of 28
+Taken at least once:100.00% of 28
+No calls
+
+Function 'smithyCardEffect'
+Lines executed:100.00% of 5
+Branches executed:100.00% of 2
+Taken at least once:100.00% of 2
+No calls
+
+Function 'adventurerCardEffect'
+Lines executed:82.35% of 17
+Branches executed:100.00% of 14
+Taken at least once:78.57% of 14
+No calls
+
+Function 'villageCardEffect'
+Lines executed:0.00% of 5
+No branches
+No calls
+
+Function 'stewardCardEffect'
+Lines executed:0.00% of 11
+Branches executed:0.00% of 4
+Taken at least once:0.00% of 4
+No calls
+
+Function 'greatHallCardEffect'
+Lines executed:0.00% of 4
+No branches
+No calls
+
+Function 'councilRoomCardEffect'
+Lines executed:100.00% of 11
+Branches executed:100.00% of 6
+Taken at least once:100.00% of 6
+No calls
+
+Function 'mineCardEffect'
+Lines executed:100.00% of 17
+Branches executed:100.00% of 14
+Taken at least once:85.71% of 14
+No calls
+
+Function 'cardEffect'
+Lines executed:6.23% of 273
+Branches executed:13.45% of 171
+Taken at least once:2.92% of 171
+No calls
+
+Function 'discardCard'
+Lines executed:76.47% of 17
+Branches executed:100.00% of 6
+Taken at least once:50.00% of 6
+No calls
+
+Function 'gainCard'
+Lines executed:73.33% of 15
+Branches executed:100.00% of 6
+Taken at least once:66.67% of 6
+No calls
+
+Function 'updateCoins'
+Lines executed:100.00% of 14
+Branches executed:100.00% of 8
+Taken at least once:100.00% of 8
+No calls
+
+File 'dominion.c'
+Lines executed:38.36% of 743
+Branches executed:42.00% of 431
+Taken at least once:33.18% of 431
+No calls
+dominion.c:creating 'dominion.c.gcov'
+
+----------------- END OF COVERAGE RESULTS: ----------------
